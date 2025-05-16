@@ -132,7 +132,7 @@ const updateService = async (req, res) => {
         // Update service details in the database
         const [result] = await db.query(
             'UPDATE service SET serviceName = ?, salonId = ?, beauticanId = ?, categoryId = ?, branchId = ?, price = ?, availability = ?, duration = ?, description = ?, image = ? WHERE id = ?',
-            [serviceName, salonId, beauticanId, categoryId, branchId, price, availability, duration, description, imageUrl || null, id]
+            [serviceName, salonId, beauticanId, categoryId, branchId, price, availability, duration, description, imageUrl, id]
         );
 
         // Check if the update was successful
